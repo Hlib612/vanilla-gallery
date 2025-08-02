@@ -5,65 +5,62 @@
     <link rel="icon" type="image/svg+xml" href="/vanilla-gallery/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
     
-    <script type="module" crossorigin src="/vanilla-gallery/assets/index-99a6ec52.js"></script>
-    <link rel="stylesheet" href="/vanilla-gallery/assets/index-66886d44.css">
+    <script type="module" crossorigin src="/vanilla-gallery/assets/index-3071cd35.js"></script>
+    <link rel="stylesheet" href="/vanilla-gallery/assets/index-83421735.css">
   </head>
   <body>
-    <section>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="/vanilla-gallery/assets/javascript-8dac5379.svg" alt="" />
-    </section>
+    <h1>Lorem ipsum dolor sit amet.</h1>
 
-    <!-- Loads the specified .html file -->
-    <section class="vite-promo">
-  <div class="container">
-    <div class="wrapper">
-      <h2 class="title">
-        <span class="gradient">Vite</span>
-      </h2>
-      <p class="text">Next Generation Frontend Tooling</p>
-      <p class="tagline">
-        Get ready for a development environment that can finally catch up with
-        you.
-      </p>
+    <!-- Loads -->
 
-      <ul class="actions">
-        <li class="action">
-          <a
-            class="link"
-            href="https://vitejs.dev/guide/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Get Started</a
-          >
-        </li>
-        <li class="action">
-          <a
-            class="link"
-            href="https://github.com/vitejs/vite"
-            target="_blank"
-            rel="noopener noreferrer"
-            >View on GitHub</a
-          >
-        </li>
-      </ul>
+    <header>
+      <div class="container">
+        
+      </div>
+    </header>
+    <main>
+      <div class="container">
+         <!-- В цей список додавай елементи галереї -->
+    <ul class="gallery js-gallery">
+
+    </ul>
+
+    <!--
+      Модальне вікно для повнорозмірного зображення
+      Для того щоб відкрити, необхідно додати на div.lightbox CSS-класс is-open
+    -->
+    <div class="lightbox js-lightbox">
+      <div class="lightbox__overlay"></div>
+
+      <div class="lightbox__content">
+        <img class="lightbox__image" src="" alt="" />
+      </div>
+
+      <button
+        type="button"
+        class="lightbox__button"
+        data-action="close-lightbox"
+      ></button>
     </div>
 
-    <div class="thumb">
-      <!-- Path to images as from index.html file -->
-      <img
-        class="pic"
-        src="/vanilla-gallery/assets/vite-logo-51249ca9.png"
-        alt="Vite logo"
-        width="640"
-        height="640"
-      />
+    <p class="output">Selected color: -</p>
+    <div class="color-palette">
+        <!-- <button class="item" data-color=''></button> -->
     </div>
-  </div>
-</section>
 
+  
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        
+      </div>
+    </footer>
 
     
   </body>
