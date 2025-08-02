@@ -1,2 +1,9 @@
-@use "../base/reaset";
-@use "../utils/variebles";
+@use "./base/reaset";
+@use "./utils/variables";
+@use "./utils/placeholders";
+@use "./base/common";
+@use "./base/container";
+// Layout
+@use "./layout/header";
+@use "./layout/main";
+@use "./layout/footer";
