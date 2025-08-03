@@ -20,6 +20,8 @@ colorPallete.append(...array);
 }
 createPalletItems()
 
+let activeButton;
+
 const colorPickerAction = event => {
     if(event.target.nodeName !== 'BUTTON'){
         return ;
@@ -30,6 +32,11 @@ const colorPickerAction = event => {
     const color = event.target.dataset.color;
     output.textContent = `Selected color: - ${color}`;
     output.style.color = color;
+    if(activeButton){
+        activeButton.classList.remove('active')
+    }
+    event.target.classList.add('active');
+    activeButton = event.target;
 }
 
 
