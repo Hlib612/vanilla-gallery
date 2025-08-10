@@ -68,21 +68,27 @@ const galleryItems = [
   },
 ];
 
-const renderTodoList = () => {
-  const gallery = img.map(todo => {
-    return (
-      <li class="gallery__item">
+const renderGallaryList = () => {
+  const gallaryMarkup = galleryItems
+    .map(item => {
+      console.log(item);
+      return `<li class="gallery__item">
         <a
           class="gallery__link"
-          href="https://cdn.pixabay.com/photo/2010/12/13/10/13/tulips-2546_1280.jpg"
+          href="${item.original}"
         >
-          <img class="pre" data-source="jriginal" alt="${description}" />
+          <img class="gallery__image" src='${item.preview}' data-source="${item.original}" alt="${item.description}" />
         </a>
-      </li>
-    );
-  });
-  console.log(gallery);
-  const galleryList = gallery.join(' ');
-  console.log(galleryList);
-  gallery.innerHTML = galleryList;
+      </li>`;
+    })
+    .join(' ');
+    console.log(gallaryMarkup);
+     gallery.innerHTML = gallaryMarkup;
 };
+renderGallaryList();
+
+const onImgClick = (event) =>{
+    event.preventDefault();
+}
+
+gallery.addEventListener('click' , onImgClick);
