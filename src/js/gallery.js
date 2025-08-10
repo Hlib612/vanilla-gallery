@@ -82,7 +82,7 @@ const renderTodoList = () => {
     );
   });
   console.log(gallery);
-//   const galleryList = gallery.join(' ');
-//   console.log(galleryList);
-//   todoList.innerHTML = galleryList;
+  const galleryList = gallery.join(' ');
+  console.log(galleryList);
+  gallery.innerHTML = galleryList;
 };
