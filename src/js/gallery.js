@@ -1,6 +1,8 @@
 const gallery = document.querySelector('.gallery');
 const lightbox = document.querySelector('.lightbox');
 const lightboxCloseButton = document.querySelector('.lightbox__button');
+const lightboxImg = document.querySelector('.lightbox__image');
+const lightboxOverlay = document.querySelector('.lightbox__overlay');
 
 const galleryItems = [
   {
@@ -88,7 +90,22 @@ const renderGallaryList = () => {
 renderGallaryList();
 
 const onImgClick = (event) =>{
-    event.preventDefault();
+          event.preventDefault();
+          lightbox.classList.add('is-open');
+          // lightbox.style.opacity = 1;
+          lightboxImg.src = event.target.dataset.source;
+          
+    // console.log(event.target)
+    // console.log(event.target.src)
+    // console.log(event.target.dataset.source)
 }
 
 gallery.addEventListener('click' , onImgClick);
+
+const onLightboxBtnClick = (event) =>{
+          lightbox.classList.remove('is-open');
+}
+
+lightboxCloseButton.addEventListener('click' , onLightboxBtnClick);
+
+lightboxOverlay.addEventListener('click' , onLightboxBtnClick);
